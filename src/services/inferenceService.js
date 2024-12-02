@@ -32,4 +32,8 @@ async function predictClassification(model, image) {
         suggestion = "Segera konsultasi dengan dokter terdekat untuk mengetahui detail terkait tingkat bahaya penyakit."
 
     }
+
+    return { confidenceScore, label, explanation, suggestion }
 }
+
+module.exports = predictClassification
