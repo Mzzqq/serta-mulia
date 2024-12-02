@@ -1,4 +1,5 @@
 const predictClassification = require('../services/inferenceService');
+const crypto = require('crypto');
 
 async function postPredictHandler(request, h) {
     const { image } = request.payload
