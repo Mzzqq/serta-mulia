@@ -6,7 +6,7 @@ const loadModel = require('../services/loadModel');
 
 (async () => {
     const server = Hapi.server({
-        port: 3000,
+        port: 5000,
         host: 'localhost',
         routes: {
             cors: {
@@ -37,7 +37,7 @@ const loadModel = require('../services/loadModel');
                 status: 'fail',
                 message: response.message
             })
-            newResponse.code(response.statusCode)
+            newResponse.code(500)
             return newResponse;
         }
 
